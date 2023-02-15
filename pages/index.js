@@ -6,5 +6,11 @@ import styles from "@/styles/Home.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <></>;
+
+  return (
+    <>
+      <h1 className="text-4xl">Hello Vova</h1>
+    </>
+  );
+
 }
