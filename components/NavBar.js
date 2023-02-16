@@ -6,7 +6,7 @@ function NavBar() {
       <div className="flex p-2">
         <Image src="logo.svg" alt="logo" width={129} height={61} />
       </div>
-      <div className="flex gap-16">
+      <div className="flex gap-8">
         <div className="p-2 cursor-pointer">ABOUT US</div>
         <div className="p-2 cursor-pointer">EXPERIENCES</div>
         <div className="p-2 cursor-pointer">BLOGS</div>
