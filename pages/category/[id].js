@@ -4,7 +4,7 @@ import { client } from "../../libs/client";
 export default function CategoryId({ blog }) {
   // show when there is no content
   if (blog.length === 0) {
-    return <div>Still Nothing content</div>;
+    return <div>Still Nothing Article</div>;
   }
   return (
     <div>

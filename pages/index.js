@@ -6,8 +6,8 @@ import styles from "@/styles/Home.module.css";
 import NavBar from "@/components/NavBar";
 import React, { useState, useEffect } from "react";
 import { client } from "../libs/client";
-import { Pagenation } from "../components/Pagenation";
-export default function Home({ blog, category, totallCount }) {
+import { Pagination } from "../components/Pagenation";
+export default function Home({ blog, category, totalCount }) {
   return (
     <>
       <NavBar />
@@ -33,6 +33,7 @@ export default function Home({ blog, category, totallCount }) {
             );
           })}
         </ul>
+        <Pagination totalCount={totalCount} />
       </div>
       <h2 className="h-20 w-full p-10 text-center font-bold">Category</h2>
 

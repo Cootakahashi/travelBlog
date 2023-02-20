@@ -1,16 +1,11 @@
 import { client } from "../../libs/client";
-import { Pagenation } from "../../components/Pagenation";
 
 export default function BlogId({ blog }) {
   return (
     <main>
       <h1>{blog.title}</h1>
       <p>{blog.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.body}`,
-        }}
-      ></div>
+      <div dangerouslySetInnerHTML={{ __html: `${blog.content}` }}></div>{" "}
     </main>
   );
 }
@@ -18,6 +13,7 @@ export default function BlogId({ blog }) {
 // for ssg path
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "travelblog77" });
+  console.log(data.contents);
 
   const paths = data.contents.map((content) => `/blog/${content.id}`);
   return { paths, fallback: false };
