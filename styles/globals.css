@@ -4,12 +4,6 @@
 
 @layer base {
   html {
-    /* background-image: url(../public/main-background.svg); */
-    background-repeat: no-repeat;
-    background-size: cover;
     font-family: "SF Pro", sans-serif;
-  }
-  .img {
-    width: 1000px;
   }
 }

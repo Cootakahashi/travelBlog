@@ -1,25 +1,26 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import NavBar from "@/components/NavBar";
 import React, { useState, useEffect } from "react";
 import { client } from "../libs/client";
 import { Pagination } from "../components/Pagenation";
+
 export default function Home({ blog, category, totalCount }) {
   return (
     <>
       <NavBar />
+
       <div>
         <Image
           className="img"
-          src="main-background.svg"
-          alt="tentative top image"
-          width={1300}
-          height={61}
-          priority
-        />
+          src="/logo/logo-on-invisible.png"
+          alt="logo"
+          width={100}
+          height={100}
+        ></Image>
       </div>
 
       <h1 className="h-20 w-full p-10 text-center font-bold">Article</h1>
