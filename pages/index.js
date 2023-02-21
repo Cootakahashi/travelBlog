@@ -11,6 +11,14 @@ import { Pagination } from "../components/Pagenation";
 export default function Home({ blog, category, totalCount }) {
   return (
     <>
+      <Image
+        src="main-background.svg"
+        alt="back"
+        style={{ height: "100%", width: "100%" }}
+        width={0}
+        height={0}
+        className="bg-cover bg-center bg-fixed"
+      />
       <NavBar />
 
       <div>

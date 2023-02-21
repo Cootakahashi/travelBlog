@@ -3,14 +3,6 @@ import Image from "next/image";
 function NavBar() {
   return (
     <>
-      <Image
-        src="main-background.svg"
-        alt="back"
-        style={{ height: "100%", width: "100%" }}
-        width={0}
-        height={0}
-        className="bg-cover bg-center bg-fixed"
-      />
       <nav className="flex absolute top-0 w-full h-20 items-center justify-between bg-white/50">
         <div className="flex p-2">
           <Image src="logo.svg" alt="logo" width={129} height={61} />
