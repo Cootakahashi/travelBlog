@@ -17,6 +17,7 @@ export default function Home({ blog, category, totalCount }) {
         style={{ height: "100%", width: "100%" }}
         width={0}
         height={0}
+        priority
         className="bg-cover bg-center bg-fixed"
       />
       <NavBar />
