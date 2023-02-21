@@ -4,8 +4,8 @@ function NavBar() {
   return (
     <>
       <nav className="flex absolute top-0 w-full h-20 items-center justify-between bg-white/50">
-        <div className="flex p-2">
-          <Image src="logo.svg" alt="logo" width={129} height={61} />
+        <div className="relative p-16 mt-4">
+          <Image className="" src="logo/logo.svg" alt="logo" fill priority />
         </div>
         <div className="flex gap-8">
           <div className="p-2 cursor-pointer">ABOUT US</div>
