@@ -23,7 +23,6 @@ export function Team() {
             src={"/logo/logo.png"}
             height={200}
             width={200}
-            priority
           />
           <h2 className="p-4">Role</h2>
           <p className="px-4">Name</p>
