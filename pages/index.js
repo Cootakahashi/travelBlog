@@ -1,22 +1,26 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import NavBar from "@/components/NavBar";
 import React, { useState, useEffect } from "react";
 import { client } from "../libs/client";
 import { Pagination } from "../components/Pagenation";
+import { Category } from "@/components/Category";
+import { Team } from "../components/Team";
+import { Sidebar } from "@/components/Sidebar";
+
 export default function Home({ blog, category, totalCount }) {
   return (
     <>
       <NavBar />
-      <div>
+      <div className="bg-white">
         <Image
-          className="img"
-          src="main-background.svg"
+          className="im w-ful"
+          // src="main-background.svg"
           alt="tentative top image"
-          width={1300}
+          width={800}
           height={61}
           priority
         />
@@ -36,7 +40,9 @@ export default function Home({ blog, category, totalCount }) {
         <Pagination totalCount={totalCount} />
       </div>
       <h2 className="h-20 w-full p-10 text-center font-bold">Category</h2>
-
+      <Category />
+      <Team />
+      <Sidebar />
       <div className="text-center">
         <ul>
           {category.map((category) => (
