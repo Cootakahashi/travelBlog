@@ -7,14 +7,27 @@ import NavBar from "@/components/NavBar";
 import React, { useState, useEffect } from "react";
 import { client } from "../libs/client";
 import { Pagination } from "../components/Pagenation";
+<<<<<<< HEAD
 import { Category } from "@/components/Category";
 import { Team } from "../components/Team";
 import { Sidebar } from "@/components/Sidebar";
+=======
+>>>>>>> 3d2dbbb0f6525deafd2abd950480d58bab6cd1bc
 
 export default function Home({ blog, category, totalCount }) {
   return (
     <>
+      <Image
+        src="main-background.svg"
+        alt="back"
+        style={{ height: "100%", width: "100%" }}
+        width={0}
+        height={0}
+        priority
+        className="bg-cover bg-center bg-fixed"
+      />
       <NavBar />
+<<<<<<< HEAD
       <div className="bg-white">
         <Image
           className="im w-ful"
@@ -24,6 +37,17 @@ export default function Home({ blog, category, totalCount }) {
           height={61}
           priority
         />
+=======
+
+      <div>
+        <Image
+          className="img"
+          src="/logo/logo-on-invisible.png"
+          alt="logo"
+          width={100}
+          height={100}
+        ></Image>
+>>>>>>> 3d2dbbb0f6525deafd2abd950480d58bab6cd1bc
       </div>
 
       <h1 className="h-20 w-full p-10 text-center font-bold">Article</h1>
