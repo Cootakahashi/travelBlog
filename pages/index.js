@@ -24,15 +24,14 @@ export default function Home({ blog, category, totalCount }) {
         className="bg-cover bg-center bg-fixed"
       />
       <NavBar />
-      <div className="bg-white">
+      <div className="relative p-32 bg-white">
         <Image
-          className="im w-ful"
-          // src="main-background.svg"
-          alt="tentative top image"
-          width={800}
-          height={61}
+          className="top-0"
+          src="/logo/logo-transparent.svg"
+          alt="logo"
+          fill
           priority
-        />
+        ></Image>
       </div>
 
       <h1 className="h-20 w-full p-10 text-center font-bold">Article</h1>
