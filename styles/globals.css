@@ -10,3 +10,9 @@
     /* width: 100vh; */
   }
 }
+.firstTitle {
+}
+
+main > h1 {
+  font-size: 55px;
+}

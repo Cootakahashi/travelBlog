@@ -3,15 +3,16 @@ import Image from "next/image";
 export function Sidebar() {
   return (
     <>
-      <div className="w-60 bg-slate-200 h-full grid gap-4 p-5 absolute right-0">
+      <div className="w-60 bg-slate-200">
         <Image
           className="bg-black rounded-xl mt-20"
-          src={"/logo/logo.png"}
+          src="/canva/top.png"
+          alt="hi"
           height={200}
           width={200}
           priority
         />
-        <h1 className="font-semibold">Travel Go Operetion</h1>
+        <h3 className="font-semibold">Travel Go Operetion</h3>
         <p className="leading-5">
           text text self intorduction text text self intorduction text text self
           intorduction text text self intorduction
