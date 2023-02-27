@@ -22,20 +22,21 @@ export default function BlogId({ blog }) {
         priority
       />
       <main className={styles.main}>
-        <div className="grid grid-cols-8">
-          <div className="col-span-6">
+        {/* <p className={styles.publishedAt}>{blog.publishedAt}</p> */}
+        <div className="grid grid-cols-7">
+          <div className="col-span-2">
             <h1 className={styles.title}>{blog.title}</h1>
-            {/* <p className={styles.publishedAt}>{blog.publishedAt}</p> */}
             <div
               className={styles.post}
               dangerouslySetInnerHTML={{ __html: `${blog.content}` }}
             ></div>
           </div>
-          <div>
+          <div className="col-start-8 col-end-9">
             <Sidebar />
           </div>
         </div>
       </main>
+      <footer className="h-6 bg-[#F4A52E] opacity-[52%]"></footer>
     </>
   );
 }
