@@ -1,0 +1,30 @@
+.main {
+  margin-left: 64px;
+
+  & h1{
+    font-size: 2rem;
+  }
+}
+
+.title {
+  margin: 40px 0;
+}
+
+.post {
+  width: 55vw;
+
+  & > h2 {
+    font-size: 1rem;
+    margin: 40px 0 16px;
+  }
+
+  & > p {
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+  }
+
+  & > ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+}

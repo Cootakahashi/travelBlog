@@ -7,6 +7,9 @@ import NavBar from "@/components/NavBar";
 import React, { useState, useEffect } from "react";
 import { client } from "../libs/client";
 import { Pagination } from "../components/Pagenation";
+import { Category } from "@/components/Category";
+import { Team } from "../components/Team";
+import { Sidebar } from "@/components/Sidebar";
 
 export default function Home({ blog, category, totalCount }) {
   return (
@@ -21,14 +24,13 @@ export default function Home({ blog, category, totalCount }) {
         className="bg-cover bg-center bg-fixed"
       />
       <NavBar />
-
-      <div>
+      <div className="relative p-32 bg-white">
         <Image
-          className="img"
-          src="/logo/logo-on-invisible.png"
+          className="top-0"
+          src="/logo/logo-transparent.svg"
           alt="logo"
-          width={100}
-          height={100}
+          fill
+          priority
         ></Image>
       </div>
 
@@ -46,7 +48,9 @@ export default function Home({ blog, category, totalCount }) {
         <Pagination totalCount={totalCount} />
       </div>
       <h2 className="h-20 w-full p-10 text-center font-bold">Category</h2>
-
+      <Category />
+      <Team />
+      <Sidebar />
       <div className="text-center">
         <ul>
           {category.map((category) => (

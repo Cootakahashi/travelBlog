@@ -7,7 +7,7 @@ export const Pagination = ({ totalCount }) => {
     [...Array(end - start + 1)].map((_, i) => start + i);
 
   return (
-    <ul>
+    <ul className="flex justify-center">
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
         <li key={index}>
           <Link href={`/blog/page/${number}`}>{number}</Link>
