@@ -8,7 +8,21 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        moving: {
+          "100%": {
+            translate: "0% 0%",
+          },
+          "0%": {
+            translate: "0% -50%",
+          },
+        },
+      },
+      animation: {
+        moving: "moving 0.4s linear",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("./plugins/animationDelay")],
 };
