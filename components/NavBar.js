@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 function NavBar() {
   return (
     <>
@@ -10,7 +10,9 @@ function NavBar() {
         <div className="flex gap-8">
           <div className="p-2 cursor-pointer">ABOUT US</div>
           <div className="p-2 cursor-pointer">EXPERIENCES</div>
-          <div className="p-2 cursor-pointer">BLOGS</div>
+          <Link href="/blog/allblog" passHref>
+            <div className="p-2 cursor-pointer ">BLOGS</div>
+          </Link>
 
           <div className="p-2 cursor-pointer">FAMILY TRAVEL</div>
           <div className="p-2 mr-2 cursor-pointer">TRAVEL TIPS</div>

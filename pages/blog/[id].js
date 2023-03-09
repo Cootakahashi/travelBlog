@@ -3,8 +3,6 @@ import styles from "../../styles/Article.module.scss";
 import Image from "next/image";
 import { Sidebar } from "@/components/Sidebar";
 export default function BlogId({ blog }) {
-  console.log(blog);
-  console.log(blog.eyecatch.url);
   const path_image = blog.eyecatch.url;
   const microCMSLoader = ({ src, width, quality }) => {
     return `${src}?auto=format&fit=max&w=${width}`;

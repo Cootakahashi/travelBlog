@@ -10,8 +10,8 @@ import { Pagination } from "../components/Pagenation";
 import { Category } from "@/components/Category";
 import { Team } from "../components/Team";
 import { Sidebar } from "@/components/Sidebar";
-import Slider from "@/components/Slider";
-import Slide from "@/components/Slide";
+// import { Slider } from "@/components/Slider";
+// import Slide from "@/components/Slide";
 import Faq from "@/components/Faq";
 
 export default function Home({ blog, category, totalCount }) {
@@ -36,8 +36,8 @@ export default function Home({ blog, category, totalCount }) {
         ></Image>
       </div>
 
-      <Slider blog={blog} />
-      <Slide />
+      {/* <Slider blog={blog} /> */}
+      {/* <Slide /> */}
       <h1 className="h-20 w-full p-10 text-center font-bold">Article</h1>
       <div className="bg-blac text-center">
         <ul>
