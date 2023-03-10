@@ -10,9 +10,10 @@ import { Pagination } from "../components/Pagenation";
 import { Category } from "@/components/Category";
 import { Team } from "../components/Team";
 import { Sidebar } from "@/components/Sidebar";
-// import { Slider } from "@/components/Slider";
-// import Slide from "@/components/Slide";
+import Slider from "@/components/Slider";
+import Slide from "@/components/Slide";
 import Faq from "@/components/Faq";
+import SwiperApp from "@/components/SwiperApp";
 
 export default function Home({ blog, category, totalCount }) {
   return (
@@ -26,7 +27,7 @@ export default function Home({ blog, category, totalCount }) {
         className=""
       />
       <NavBar />
-      <div className="relative p-32 bg-white">
+      <div className="relative p-[197px] bg-white">
         <Image
           className="top-0"
           src="/logo/logo-transparent.svg"
@@ -36,9 +37,10 @@ export default function Home({ blog, category, totalCount }) {
         ></Image>
       </div>
 
+      <SwiperApp blog={blog} />
+
       {/* <Slider blog={blog} /> */}
-      {/* <Slide /> */}
-      <h1 className="h-20 w-full p-10 text-center font-bold">Article</h1>
+      {/* <h1 className="h-20 w-full p-10 text-center font-bold">Article</h1>
       <div className="bg-blac text-center">
         <ul>
           {blog.map((blog) => {
@@ -50,7 +52,7 @@ export default function Home({ blog, category, totalCount }) {
           })}
         </ul>
         <Pagination totalCount={totalCount} />
-      </div>
+      </div> */}
       <h2 className="h-20 w-full p-10 text-center font-bold">Category</h2>
       <Category />
       <Team />

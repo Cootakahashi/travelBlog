@@ -6,12 +6,18 @@ export default function CategoryId({ blog }) {
   if (blog.length === 0) {
     return <div>Still Nothing Article</div>;
   }
+  console.log(blog);
   return (
     <div>
       <ul>
         {blog.map((blog) => (
           <li key={blog.id}>
             <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `${blog.body}`,
+              }}
+            />
           </li>
         ))}
       </ul>
