@@ -9,34 +9,34 @@ export function Team() {
         <div className="w-40 text-left ml-auto z-10">
           <Image
             className="bg-black rounded-xl"
-            src={"/logo/logo.png"}
+            src={"/team/vova.jpg"}
             height={200}
             width={200}
             priority
           />
-          <h2 className="p-4">Role</h2>
-          <p className="px-4">Name</p>
+          <h2 className="p-4">Programmer</h2>
+          <p className="px-4">Vova</p>
         </div>
         <div className="w-40 text-left z-10">
           <Image
-            className="bg-black rounded-xl"
-            src={"/logo/logo.png"}
+            className="bg-black rounded-xl h-40"
+            src={"/team/coo.jpg"}
             height={200}
             width={200}
           />
-          <h2 className="p-4">Role</h2>
-          <p className="px-4">Name</p>
+          <h2 className="p-4">Editer</h2>
+          <p className="px-4">Coo</p>
         </div>
         <div className="w-40 text-left mr-20 z-10 ">
           <Image
             className="bg-black rounded-xl"
-            src={"/logo/logo.png"}
+            src={"/team/jon_outside.jpg"}
             height={200}
             width={200}
             priority
           />
-          <h2 className="p-4">Role</h2>
-          <p className="px-4">Name</p>
+          <h2 className="p-4">Writer</h2>
+          <p className="px-4">Jon</p>
         </div>
       </div>
       <div className="w-full h-60 bg-slate-200 -translate-y-32 opacity-30 z-0"></div>

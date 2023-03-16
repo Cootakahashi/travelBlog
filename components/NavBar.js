@@ -3,7 +3,7 @@ import Link from "next/link";
 function NavBar() {
   return (
     <>
-      <nav className="flex absolute top-0 w-full h-20 items-center justify-between bg-white/50">
+      <nav className="flex absolute top-0 w-full h-16 items-center justify-between bg-white/75">
         <div className="relative p-16 mt-4">
           <Image className="" src="logo/logo.svg" alt="logo" fill priority />
         </div>

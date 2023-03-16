@@ -18,29 +18,30 @@ import SwiperApp from "@/components/SwiperApp";
 export default function Home({ blog, category, totalCount }) {
   return (
     <>
-      <Image
-        src="/top/3.png"
-        alt="back"
-        width={1920}
-        height={0}
-        priority
-        className=""
-      />
-      <NavBar />
-      <div className="relative p-[197px] bg-white">
+      <div className="mb-40">
         <Image
-          className="top-0"
-          src="/logo/logo-transparent.svg"
-          alt="logo"
-          fill
+          src="/top/3.png"
+          alt="back"
+          width={1920}
+          height={0}
           priority
-        ></Image>
-      </div>
+          className=""
+        />
+        <NavBar />
+        <div className="relative p-[197px] bg-white">
+          <Image
+            className="top-0"
+            src="/logo/logo-transparent.svg"
+            alt="logo"
+            fill
+            priority
+          ></Image>
+        </div>
 
-      <SwiperApp blog={blog} />
+        <SwiperApp blog={blog} />
 
-      {/* <Slider blog={blog} /> */}
-      {/* <h1 className="h-20 w-full p-10 text-center font-bold">Article</h1>
+        {/* <Slider blog={blog} /> */}
+        {/* <h1 className="h-20 w-full p-10 text-center font-bold">Article</h1>
       <div className="bg-blac text-center">
         <ul>
           {blog.map((blog) => {
@@ -53,9 +54,10 @@ export default function Home({ blog, category, totalCount }) {
         </ul>
         <Pagination totalCount={totalCount} />
       </div> */}
-      <Category />
-      <Team />
-      <Faq />
+        <Category />
+        <Team />
+        <Faq />
+      </div>
     </>
   );
 }
