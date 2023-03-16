@@ -16,7 +16,7 @@ const Question = ({ prop }) => {
         <h4 className="text-2xl">{question}</h4>
         {clicked ? (
           <>
-            <div className="w-10 h-[1px] m-1 bg-zinc-900 rotate-45 absolute right-16 transition-all"></div>
+            <div className="w-10 h-[1px] m-1 bg-zinc-900 rotate-45 absolute right-16 transition-all "></div>
             <div className="w-10 h-[1px] m-1 bg-zinc-900 absolute -rotate-45 right-16 transition-all"></div>
           </>
         ) : (
@@ -31,7 +31,7 @@ const Question = ({ prop }) => {
           {answer}
         </li>
       ) : (
-        <></>
+        <li className=""></li>
       )}
     </>
   );

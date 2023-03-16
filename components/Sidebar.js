@@ -3,19 +3,19 @@ import Image from "next/image";
 export function Sidebar() {
   return (
     <>
-      <div className="w-60 bg-slate-200 flex flex-col items-center justify-between gap-7">
+      <div className="w-60 bg-slate-500 flex flex-col items-center justify-between gap-7">
         <Image
-          className="bg-black rounded-xl mt-20"
-          src="/canva/top.png"
+          className="rounded-xl mt-20"
+          src="/logo/logo.png"
           alt="hi"
           height={200}
           width={200}
           priority
         />
         <h3 className="font-semibold">Travel Go Operetion</h3>
-        <p className="ml-5 leading-5">
-          text text self intorduction text text self intorduction text text self
-          intorduction text text self intorduction
+        <p className=" leading-6 px-3">
+          It is important to prepare in advance for the trip. We operate
+          travelgo to help you travel safely and comfortably!
         </p>
         <button className="self-center mt-1 bg-white border rounded-xl px-8 py-4 mb-10">
           Contact

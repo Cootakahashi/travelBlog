@@ -10,8 +10,8 @@ import { Pagination } from "../components/Pagenation";
 import { Category } from "@/components/Category";
 import { Team } from "../components/Team";
 import { Sidebar } from "@/components/Sidebar";
-import Slider from "@/components/Slider";
-import Slide from "@/components/Slide";
+// import Slider from "@/components/Slider";
+// import Slide from "@/components/Slide";
 import Faq from "@/components/Faq";
 import SwiperApp from "@/components/SwiperApp";
 
@@ -19,7 +19,7 @@ export default function Home({ blog, category, totalCount }) {
   return (
     <>
       <Image
-        src="main-background.svg"
+        src="/top/3.png"
         alt="back"
         width={1920}
         height={0}
@@ -53,20 +53,9 @@ export default function Home({ blog, category, totalCount }) {
         </ul>
         <Pagination totalCount={totalCount} />
       </div> */}
-      <h2 className="h-20 w-full p-10 text-center font-bold">Category</h2>
       <Category />
       <Team />
       <Faq />
-      <Sidebar />
-      <div className="text-center">
-        <ul>
-          {category.map((category) => (
-            <li key={category.id}>
-              <Link href={`/category/${category.id}`}>{category.name}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
     </>
   );
 }
