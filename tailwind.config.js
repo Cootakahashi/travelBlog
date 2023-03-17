@@ -27,5 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("./plugins/animationDelay")],
+  plugins: [require("./plugins/openVariant")],
 };
