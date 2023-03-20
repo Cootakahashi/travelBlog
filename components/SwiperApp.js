@@ -15,8 +15,6 @@ export default function SwiperApp({ blog }) {
         <Swiper
           slidesPerView={1}
           spaceBetween={0}
-          // slidesOffsetAfter={50}
-          // slidesOffsetBefore={150}
           allowSlideNext={true}
           autoHeight={false}
           freeMode

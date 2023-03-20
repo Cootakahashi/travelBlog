@@ -10,20 +10,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        "4xl": "5px 3px 10px rgb(0 0 0 / 0.2)",
-      },
-      keyframes: {
-        moving: {
-          "100%": {
-            translate: "0% 0%",
-          },
-          "0%": {
-            translate: "0% -50%",
-          },
-        },
-      },
-      animation: {
-        moving: "moving 0.4s linear",
+        "4xl": "12px 3px 10px rgb(0 0 0 / 0.4)",
       },
     },
   },
