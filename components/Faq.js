@@ -22,7 +22,7 @@ const Faq = () => {
   return (
     <>
       <h2 className="text-center p-2 font-medium text-5xl mb-16">FAQ'S</h2>
-      <ul className="flex flex-col justify-center items-center w-[69.5%] mx-auto relative">
+      <ul className="flex flex-col w-[69.5%] mx-auto">
         {questions.map((q, i) => (
           <Question prop={q} key={i} />
         ))}
