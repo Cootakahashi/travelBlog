@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 export function Category({ category }) {
   return (
-    <div className="grid grid-rows- grid-cols-3  px-10 overflow-hidden mt-40">
+    <div className="md:grid grid-rows- grid-cols-3  px-10 overflow-hidden mt-40">
       <div className="mr-5">
         {" "}
         <Link
