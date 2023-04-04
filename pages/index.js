@@ -1,21 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import NavBar from "@/components/NavBar";
 import React, { useState, useEffect } from "react";
 import { client } from "../libs/client";
 import { Pagination } from "../components/Pagenation";
 import { Category } from "@/components/Category";
 import { Team } from "../components/Team";
-import { Sidebar } from "@/components/Sidebar";
-// import Slider from "@/components/Slider";
-// import Slide from "@/components/Slide";
 import Faq from "@/components/Faq";
 import SwiperApp from "@/components/SwiperApp";
 
-export default function Home({ blog, category, totalCount }) {
+export default function Home({ blog, category, totalCount, teamMembers }) {
   return (
     <>
       <div className="mb-40">
@@ -27,7 +21,18 @@ export default function Home({ blog, category, totalCount }) {
           priority
           className=""
         />
-        <NavBar />
+        {/* <Image
+          src="/compress/4.png"
+          alt="back"
+          width={1920}
+          height={0}
+          priority
+          className="md:hidden hidden "
+        /> */}
+        <div className="hidden md:block">
+          <NavBar />
+        </div>
+
         <div className="relative p-[197px] bg-white">
           <Image
             className="top-0"
@@ -55,7 +60,7 @@ export default function Home({ blog, category, totalCount }) {
         <Pagination totalCount={totalCount} />
       </div> */}
         <Category />
-        <Team />
+        <Team teamMembers={teamMembers} />
         <Faq />
       </div>
     </>
@@ -68,6 +73,28 @@ export const getStaticProps = async () => {
     endpoint: "travelblog77",
     queries: { offset: 0, limit: 5 },
   });
+  const teamMembers = [
+    {
+      id: 1,
+      name: "John Doe",
+      role: "Programmer",
+
+      imageSrc: "/team/vova.jpg",
+    },
+    {
+      id: 2,
+      name: "Jane Smith",
+      role: "Writer",
+      imageSrc: "/team/jon_outside.jpg",
+    },
+    {
+      id: 3,
+      name: "Bob Johnson",
+      role: "Editor",
+
+      imageSrc: "/team/coo1.jpg",
+    },
+  ];
 
   //get category content
   const categoryData = await client.get({ endpoint: "categories" });
@@ -77,6 +104,7 @@ export const getStaticProps = async () => {
       blog: data.contents,
       totalCount: data.totalCount,
       category: categoryData.contents,
+      teamMembers: teamMembers,
     },
   };
 };

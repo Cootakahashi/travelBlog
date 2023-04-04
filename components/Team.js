@@ -1,45 +1,71 @@
 import Image from "next/image";
+import { Sns } from "./sns";
 
-export function Team() {
+export function Team({ teamMembers }) {
+  console.log(teamMembers);
   return (
-    <>
-      <div className="flex gap-12 my-10 p-10 mt-40">
-        <h1 className="text-3xl px-20 whitespace-pre-line font-sembold">{`Team \nMembers`}</h1>
-
-        <div className="w-40 text-left ml-auto z-10">
-          <Image
-            className="bg-black rounded-xl"
-            src={"/team/vova.jpg"}
-            height={200}
-            width={200}
-            priority
-          />
-          <h2 className="p-4">Programmer</h2>
-          <p className="px-4">Vova</p>
-        </div>
-        <div className="w-40 text-left z-10">
-          <Image
-            className="bg-black rounded-xl h-40"
-            src={"/team/coo.jpg"}
-            height={200}
-            width={200}
-          />
-          <h2 className="p-4">Editer</h2>
-          <p className="px-4">Coo</p>
-        </div>
-        <div className="w-40 text-left mr-20 z-10 ">
-          <Image
-            className="bg-black rounded-xl"
-            src={"/team/jon_outside.jpg"}
-            height={200}
-            width={200}
-            priority
-          />
-          <h2 className="p-4">Writer</h2>
-          <p className="px-4">Jon</p>
+    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          Our Team
+        </h2>
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {teamMembers?.map((member) => (
+            <div
+              key={member.id}
+              className="col-span-1 bg-gray-100 rounded-lg shadow divide-y divide-gray-200"
+            >
+              <div className="px-4 py-5 sm:p-6">
+                <div className="flex-shrink-0">
+                  <Image
+                    src={member.imageSrc}
+                    alt={member.name}
+                    width={300}
+                    height={400}
+                    className="w-full rounded-lg h-full"
+                  />
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-lg font-medium text-gray-900">
+                    {member.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500">{member.role}</p>
+                </div>
+                <Sns />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="w-full h-60 bg-slate-200 -translate-y-32 opacity-30 z-0"></div>
-    </>
+    </div>
   );
+}
+
+export async function getStaticProps(context) {
+  const teamMembers = [
+    {
+      id: 1,
+      name: "John Doe",
+      role: "Programmer",
+      imageSrc: "/team/vova.jpg",
+    },
+    {
+      id: 2,
+      name: "Jane Smith",
+      role: "Writer",
+      imageSrc: "/team/jon_outside.jpg",
+    },
+    {
+      id: 3,
+      name: "Bob Johnson",
+      role: "Editor",
+      imageSrc: "/team/coo1.jpg",
+    },
+  ];
+
+  return {
+    props: {
+      teamMembers,
+    },
+  };
 }
