@@ -29,9 +29,7 @@ export default function Home({ blog, category, totalCount, teamMembers }) {
           priority
           className="md:hidden hidden "
         /> */}
-        <div className="hidden md:block">
-          <NavBar />
-        </div>
+        <NavBar />
 
         <div className="relative p-[197px] bg-white">
           <Image

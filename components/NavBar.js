@@ -35,11 +35,11 @@ function NavBar() {
             <div className="cursor-pointer hover:bg-black/10 w-full text-center">
               EXPERIENCES
             </div>
-            <Link href="/blog/allblog" passHref>
-              <div className="cursor-pointer hover:bg-black/10 w-full text-center">
+            <div className="cursor-pointer hover:bg-black/10 w-full text-center">
+              <Link href="/blog/allblog" passHref>
                 BLOGS
-              </div>
-            </Link>
+              </Link>
+            </div>
             <div className="cursor-pointer hover:bg-black/10 w-full text-center">
               FAMILY TRAVEL
             </div>
